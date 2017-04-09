@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getRant(n) {
+        var n1=0;
+        if (isNaN(n)) return;
+        var arr = [];
+        for (var i = 0; i < n; i++) {
+            while (true) {
+                n1++;
+                var Num = Math.round(Math.random() * 30 + 2);
+                if (arr.indexOf(Num)===-1) {
+                    arr.push(Num);
+                    break;
+                }
+            }
+
+        }
+        console.log(arr,n1)
+        var data=arr.sort(function(a,b){return a-b});
+        console.log(data)
+    }
+   getRant(31)
+</script>
+</body>
+</html>
